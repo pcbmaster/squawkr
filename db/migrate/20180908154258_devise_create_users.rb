@@ -3,6 +3,8 @@
 class DeviseCreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
+      t.has_one :bio
+      t.has_many :comment
       ## Database authenticatable
       t.string :email,              null: false, default: ""
       t.string :encrypted_password, null: false, default: ""
@@ -36,6 +38,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.2]
 
 
       t.timestamps null: false
+      add_column :users, :first_name, :string
+      add_column :users, :last_name, :string
     end
 
     add_index :users, :email,                unique: true
