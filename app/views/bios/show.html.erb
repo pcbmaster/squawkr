@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<h1><%= current_user.first_name %>
-    <%= current_user.last_name %>
-</h1>
-=======
-<<<<<<< HEAD
-=======
->>>>>>> more css
 <div class= 'bio-body'>
   <h1><b><%= @name %><b></h1>
   <hr />
@@ -16,41 +7,13 @@
   <hr />
   <h4><%= @bio.description %></h4>
   <hr />
+  <%= link_to  "Edit Bio", edit_bio_path(@bio), class: 'ui inverted button' %> 
 </div>
 
  <ul>
   <p><%= @posts.each do |posts| %>
   <% end %>
-<<<<<<< HEAD
-  </ul>
-
-  <%= link_to  "Edit Bio", edit_user_bio_path(@user, @bio) %>
-</div>
-=======
-<h1><%= @user.full_name %></h1>
->>>>>>> c9f4a19791d0b978c22065ac8ee9913a5bc03b33
-<hr />
-<h2>Welcome to Squawkr</h2>
-<h3><%= @bio.location %></h3>
-<hr />
-<h4><%= @bio.age %></h4>
-<hr />
-<h4><%= @bio.description %></h4>
-<hr />
-<ul>
-<p><%= @posts.each do |post| %>
-<%= post.body%>
-<% end %>
-=======
->>>>>>> more css
 </ul>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-<%= link_to  "Bio", bio_path(@user, @bio) %>
->>>>>>> origin/master
->>>>>>> c9f4a19791d0b978c22065ac8ee9913a5bc03b33
-=======
-  <%= link_to  "Edit Bio", edit_bio_path(@bio), class: 'ui inverted button' %>   
->>>>>>> more css
+
+
