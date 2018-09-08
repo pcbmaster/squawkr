@@ -1,6 +1,28 @@
+<<<<<<< HEAD
 <h1><%= current_user.first_name %>
     <%= current_user.last_name %>
 </h1>
+=======
+<<<<<<< HEAD
+<div class= 'bio-body'>
+  <h1><b><%= @user.full_name %><b></h1>
+  <hr />
+  <h3><%= @bio.location %></h3>
+  <hr />
+  <h4><%= @bio.age %></h4>
+  <hr />
+  <h4><%= @bio.description %></h4>
+  <hr />
+  <ul>
+  <p><%= @posts.each do |posts| %>
+  <% end %>
+  </ul>
+
+  <%= link_to  "Edit Bio", edit_user_bio_path(@user, @bio) %>
+</div>
+=======
+<h1><%= @user.full_name %></h1>
+>>>>>>> c9f4a19791d0b978c22065ac8ee9913a5bc03b33
 <hr />
 <h2>Welcome to Squawkr</h2>
 <h3><%= @bio.location %></h3>
@@ -14,3 +36,9 @@
 <%= post.body%>
 <% end %>
 </ul>
+<<<<<<< HEAD
+=======
+
+<%= link_to  "Bio", bio_path(@user, @bio) %>
+>>>>>>> origin/master
+>>>>>>> c9f4a19791d0b978c22065ac8ee9913a5bc03b33
