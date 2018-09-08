@@ -1,9 +1,8 @@
 class BiosController < ApplicationController
-  before_action :set_user
   before_action :set_bio, only: [:show, :edit, :update]
 
   def index
-    @bios = @user.bio 
+    @bios = Bio.show
   end 
 
   def show
@@ -21,7 +20,7 @@ class BiosController < ApplicationController
     @bio = current_user.bios.new(bio_params)
 
     if @bio.save
-      redirect_to bios_path
+      redirect_to bio_path
     else   
       render :new
     end
@@ -29,10 +28,6 @@ class BiosController < ApplicationController
 
 
   private 
-
-    def set_user
-      @user = User.find(params[:user_id])
-    end
 
     def set_bio
       @bio = Bio.find(params[:id])
