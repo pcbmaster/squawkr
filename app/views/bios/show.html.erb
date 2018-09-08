@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class= 'bio-body'>
   <h1><b><%= @user.full_name %><b></h1>
   <hr />
@@ -14,3 +15,20 @@
 
   <%= link_to  "Edit Bio", edit_user_bio_path(@user, @bio) %>
 </div>
+=======
+<h1><%= @user.full_name %></h1>
+<hr />
+<h2>Welcome to Squawkr</h2>
+<h3><%= @bio.location %></h3>
+<hr />
+<h4><%= @bio.age %></h4>
+<hr />
+<h4><%= @bio.description %></h4>
+<hr />
+<ul>
+<p><%= @posts.each do |posts| %>
+<% end %>
+</ul>
+
+<%= link_to  "Bio", bio_path(@user, @bio) %>
+>>>>>>> origin/master
