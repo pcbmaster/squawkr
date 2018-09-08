@@ -2,20 +2,17 @@ class BiosController < ApplicationController
   before_action :set_bio, only: [:show, :edit, :update]
 
   def index
-<<<<<<< HEAD
     @bios = Bio.all 
   end 
 
   def show
     @bios = Bio.find(params[:id])
     @posts = Post.all
-=======
     @bios = @users.bio 
   end 
 
   def show
     full_name
->>>>>>> more css
   end
 
   def new

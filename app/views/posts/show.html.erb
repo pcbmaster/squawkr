@@ -1,7 +1,13 @@
-<div class='post-body'>
-<h3><%= @post.body %><h3>
-</div>
-<br />
-<div class='comment-body'>
-</div>
+    <div class="post-container">
+	<div class="post-data">
+	    <img class="rounded" src="http://www.iconarchive.com/download/i78687/iconka/meow-2/cat-hungry.ico">
+	    <div class="post-vertical-stack">
+		<% @user = User.find(item.user_id) %>
+		<h4><b><%=@user.first_name%> <%=@user.last_name%><b></h4>
+		<%=item.body%>
+	    </div>
+	</div>
+    </div>
+
 <%= <%= link_to  "back", users_index_path %>
+
