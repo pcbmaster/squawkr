@@ -1,18 +1,19 @@
 class PostsController < ApplicationController
+  before_action :set_user
   before_action :set_post, only: [:show, :destroy]
 
   def show
   end
 
   def new
-    @post = Post.new
+    @post = @user.posts.new
   end
 
   def create
-    @post = Post.new(post_params)
+    @post = @user.post.new(post_params)
 
     if @post.save
-      redirect_to posts_path
+      redirect_to [@user, @post]
     else
       render :new
     end
@@ -20,12 +21,16 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
-    redirect_to posts_path
+    redirect_to user_posts_path
   end
 
   private
-
-    def before_action
+    
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+    
+    def set_post
       @post = Post.find(params[:id])
     end
 
