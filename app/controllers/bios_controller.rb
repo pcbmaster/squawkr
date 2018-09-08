@@ -1,5 +1,5 @@
-class BiosController < ApplicationController[:show, :edit]
-  before_action :set_bios, only: 
+class BiosController < ApplicationController[
+  before_action :set_bios
 
   def index
     @bios = Bios.all 
