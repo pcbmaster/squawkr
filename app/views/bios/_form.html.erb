@@ -1,0 +1,14 @@
+<h1><%= @bio.id ? 'Edit Bio' : 'Create Bio' %></h1>
+<hr />
+<%= form_for [@user, @bio] do |f| %>
+  <%= f.label :age %>
+  <%= f.text_field :age, required: true %>
+  <br />
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+  <br />
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <br />
+  <%= f.sumbit %>
+<% end %>
