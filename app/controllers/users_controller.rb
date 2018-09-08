@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :destroy]
 
   def index
-    @post = Post.all
-    
+    @posts = Post.all
   end
 
   def show
