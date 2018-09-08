@@ -1,11 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <h1><%= current_user.first_name %>
     <%= current_user.last_name %>
 </h1>
 =======
 <<<<<<< HEAD
+=======
+>>>>>>> more css
 <div class= 'bio-body'>
-  <h1><b><%= @user.full_name %><b></h1>
+  <h1><b><%= @name %><b></h1>
   <hr />
   <h3><%= @bio.location %></h3>
   <hr />
@@ -13,9 +16,12 @@
   <hr />
   <h4><%= @bio.description %></h4>
   <hr />
-  <ul>
+</div>
+
+ <ul>
   <p><%= @posts.each do |posts| %>
   <% end %>
+<<<<<<< HEAD
   </ul>
 
   <%= link_to  "Edit Bio", edit_user_bio_path(@user, @bio) %>
@@ -35,10 +41,16 @@
 <p><%= @posts.each do |post| %>
 <%= post.body%>
 <% end %>
+=======
+>>>>>>> more css
 </ul>
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 <%= link_to  "Bio", bio_path(@user, @bio) %>
 >>>>>>> origin/master
 >>>>>>> c9f4a19791d0b978c22065ac8ee9913a5bc03b33
+=======
+  <%= link_to  "Edit Bio", edit_bio_path(@bio), class: 'ui inverted button' %>   
+>>>>>>> more css
