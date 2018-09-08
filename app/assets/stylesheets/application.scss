@@ -4,3 +4,11 @@
 .ui-secondary-pointing-menu {
 color: green;
 }
+
+.navbar-padding {
+    width: 100%;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
