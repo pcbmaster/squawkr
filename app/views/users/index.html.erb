@@ -1,5 +1,12 @@
 <% @posts.each do |item| %>
-  <div>
-  <%=item.body%>
-  </div>
+    <div class="post-container">
+	<div class="post-data">
+	    <img class="rounded" src="http://www.iconarchive.com/download/i78687/iconka/meow-2/cat-hungry.ico">
+	    <div class="post-vertical-stack">
+		<% @user = User.find(item.user_id) %>
+		<h4><%=@user.first_name%> <%=@user.last_name%></h4>
+		<%=item.body%>
+	    </div>
+	</div>
+    </div>
 <% end %>
