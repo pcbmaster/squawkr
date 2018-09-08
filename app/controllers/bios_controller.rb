@@ -3,7 +3,7 @@ class BiosController < ApplicationController
   before_action :set_bio, only: [:show, :edit, :update]
 
   def index
-    @bios = @user.bio 
+    @bios = @users.bio 
   end 
 
   def show
