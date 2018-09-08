@@ -1,4 +1,6 @@
-<h1><%= @user.full_name %></h1>
+<h1><%= current_user.first_name %>
+    <%= current_user.last_name %>
+</h1>
 <hr />
 <h2>Welcome to Squawkr</h2>
 <h3><%= @bio.location %></h3>
@@ -8,8 +10,7 @@
 <h4><%= @bio.description %></h4>
 <hr />
 <ul>
-<p><%= @posts.each do |posts| %>
+<p><%= @posts.each do |post| %>
+<%= post.body%>
 <% end %>
 </ul>
-
-<%= link_to  "Bio", bio_path(@user, @bio) %>
