@@ -6,7 +6,7 @@ class BiosController < ApplicationController[
   end 
 
   def create
-    @bios = Bios.new(bio_params)
+    @bios = current_user.bios.new(bio_params)
 
     if @bios.save
       redirect_to bios_path
@@ -23,6 +23,6 @@ class BiosController < ApplicationController[
 
   private 
     def bios_params
-      params.require(:bios).permit(:name)
+      params.require(:bios).permit(:age, :description, :location)
     end 
 end

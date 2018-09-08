@@ -1,11 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_user
-<<<<<<< HEAD
-  before_action :set_post, except [:creat, :new]
-=======
   before_action :set_post, only: [:show, :destroy]
 
->>>>>>> 0819711e8bc0a5245b731e93cc25c7b17f04f374
   def show
   end
 
